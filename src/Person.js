@@ -1,11 +1,31 @@
 class Person {
-  constructor(name) {
-    this.name = name;
+  constructor(firstName, surName) {
+    this.firstName = firstName;
+    this.surName = surName;
+    this.emails = [];
   }
 
-  greet() {
-    return `${this.name} says hello.`;
+  static register(...args) {
+    return new Person(...args);
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.surName}`;
+  }
+
+  set email(email) {
+    this.emails.push(email);
+  }
+
+  get allEmails() {
+    return this.emails.join(', ');
   }
 }
 
-console.log(new Person('Chamling').greet());
+let person = Person.register('Sagar', 'Chamling');
+
+person.email = 'sagar@unknown.com';
+person.email = 'sgr.raee@gmail.com';
+console.dir(person);
+console.log(person.fullName);
+console.log(person.allEmails);

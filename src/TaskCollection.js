@@ -6,20 +6,10 @@ class TaskCollection {
   log() {
     this.tasks.forEach(task => console.log(task));
   }
+
+  dump() {
+    console.log(this.tasks);
+  }
 }
 
-class Task {}
-
-new TaskCollection([
-    new Task, new Task, new Task
-  ]).log();
-
-function defaultDiscountRate() {
-  return .10;
-}
-
-function applyDiscount(cost, discount = defaultDiscountRate()) {
-  return cost - (cost * discount);
-}
-
-console.log(applyDiscount(100));
+export default TaskCollection;

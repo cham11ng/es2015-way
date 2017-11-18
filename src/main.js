@@ -1,5 +1,5 @@
-import TaskCollection from './TaskCollection.js';
-import Person from './Person.js';
+import TaskCollection from './class/TaskCollection.js';
+import Person from './class/Person.js';
 
 new TaskCollection([
   'Go to the store',

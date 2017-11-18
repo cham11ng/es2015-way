@@ -1,22 +1,44 @@
-var webpack = require('webpack');
+let webpack = require('webpack');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let inProduction = (process.env.NODE_ENV === 'production');
 
 module.exports = {
-  entry: './src/main.js',
-  devtool: 'source-map',
+  entry: {
+    app: [
+      './src/main.js',
+      './src/main.scss'
+    ]
+  },
   output: {
-    filename: './dist/main.js'
+    path: __dirname + '/dist',
+    filename: '[name].js'
   },
+  devtool: 'source-map',
   module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: "babel-loader"
-    }]
+    rules: [
+      {
+        test: /\.s[ac]ss$/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'sass-loader'],
+          fallback: 'style-loader'
+        })
+      }, 
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      }
+    ]
   },
-  plugins: []
+  plugins: [
+    new ExtractTextPlugin('[name].css'),
+    new webpack.LoaderOptionsPlugin({
+      minimize: inProduction
+    })
+  ]
 };
 
-if (process.env.NODE_ENV == 'production') {
+if (inProduction) {
   module.exports.plugins.push(
     new webpack.optimize.UglifyJsPlugin()
   );

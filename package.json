@@ -13,7 +13,9 @@
     "webpack": "^3.8.1"
   },
   "scripts": {
-    "build": "webpack --watch"
+    "dev": "webpack",
+    "watch": "webpack --watch",
+    "production": "NODE_ENV=production webpack"
   },
   "dependencies": {}
 }

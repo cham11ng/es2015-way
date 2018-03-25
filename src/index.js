@@ -4,10 +4,13 @@ import Person from './js/Person.js';
 new TaskCollection([
   'Go to the store',
   'Finish screencast',
-  'Buy a ticket'
+  'Buy a ticket',
+  'Buy popcorn',
+  'Watch movie',
+  'Meet friend'
 ]).dump();
 
-let person = Person.register('Sagar', 'Chamling');
+const person = Person.register('Sagar', 'Chamling');
 person.email = 'sagar@unknown.com';
 person.email = 'sgr.raee@gmail.com';
 console.dir(person);

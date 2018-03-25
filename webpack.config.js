@@ -1,7 +1,7 @@
-var webpack = require('webpack');
-var WebpackBar = require('webpackbar');
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const WebpackBar = require('webpackbar');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -37,7 +37,6 @@ module.exports = {
 
   plugins: [
     new WebpackBar({
-      profile: true,
       name: 'Webpack Starter'
     }),
 

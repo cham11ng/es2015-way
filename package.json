@@ -38,10 +38,8 @@
     "precommit": "lint-staged",
     "lint:fix": "eslint --fix src/**/*.{js}",
     "prettify": "prettier --write src/**/*.{js,json}",
-    "start": "NODE_ENV=development webpack-dev-server --open",
-    "dev": "NODE_ENV=development webpack",
-    "watch": "NODE_ENV=development webpack --watch",
-    "build": "NODE_ENV=production webpack --hide-modules"
+    "build": "webpack --config webpack.prod.js --hide-modules",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "lint-staged": {
     "linters": {

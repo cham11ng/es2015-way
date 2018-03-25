@@ -5,8 +5,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  mode: process.env.NODE_ENV,
-
   entry: {
     app: ['./src/index.js', './src/app.scss']
   },
@@ -14,13 +12,6 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     filename: '[name].js'
-  },
-
-  devtool: 'inline-source-map',
-
-  devServer: {
-    hot: true,
-    contentBase: './dist'
   },
 
   module: {
@@ -43,10 +34,6 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(['dist'], { verbose: false }),
-
-    new webpack.NamedModulesPlugin(),
-
-    new webpack.HotModuleReplacementPlugin(),
 
     new ExtractTextPlugin('[name].css'),
 

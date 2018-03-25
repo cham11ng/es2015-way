@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const WebpackBar = require('webpackbar');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -36,11 +37,13 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(['dist']),
+
+    new ExtractTextPlugin('[name].css'),
+
     new WebpackBar({
       name: 'Webpack Starter'
     }),
-
-    new ExtractTextPlugin('[name].css'),
 
     new webpack.LoaderOptionsPlugin({
       minimize: process.env.NODE_ENV === 'production'

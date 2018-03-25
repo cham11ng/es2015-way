@@ -1,8 +1,8 @@
 # es2015-way
 
 Way to EcmaScript 2015
-<a href="https://travis-ci.org/cham11ng/typescript-api-starter">
-  <img src="https://travis-ci.org/cham11ng/typescript-api-starter.svg?branch=master" alt="Build Status">
+<a href="https://travis-ci.org/cham11ng/webpack-starter">
+  <img src="https://travis-ci.org/cham11ng/webpack-starter.svg?branch=master" alt="Build Status">
 </a>
 
 ## Requirement
@@ -13,8 +13,6 @@ Way to EcmaScript 2015
 
 ## Installation
 
-* `git clone git@github.com:cham11ng/es2015-way.git`
+* `git clone git@github.com:cham11ng/webpack-starter.git`
 * `yarn install`
 * `yarn run build`
-
-> Thanks to Jaffrey Way

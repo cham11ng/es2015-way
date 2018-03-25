@@ -16,7 +16,12 @@ module.exports = {
     filename: '[name].js'
   },
 
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
+
+  devServer: {
+    hot: true,
+    contentBase: './dist'
+  },
 
   module: {
     rules: [
@@ -37,16 +42,16 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist'], { verbose: false }),
+
+    new webpack.NamedModulesPlugin(),
+
+    new webpack.HotModuleReplacementPlugin(),
 
     new ExtractTextPlugin('[name].css'),
 
     new WebpackBar({
       name: 'Webpack Starter'
-    }),
-
-    new webpack.LoaderOptionsPlugin({
-      minimize: process.env.NODE_ENV === 'production'
     }),
 
     new HTMLWebpackPlugin({

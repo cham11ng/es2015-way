@@ -1,6 +1,7 @@
 {
   "name": "es6-way",
-  "version": "0.1",
+  "version": "0.2.0",
+  "homepage": "https://cham11ng.github.io/webpack-starter",
   "description": "Way to EcmaScript 2015",
   "main": "app.js",
   "repository": "git@github.com:cham11ng/webpack-starter.git",
@@ -20,6 +21,6 @@
   "scripts": {
     "dev": "webpack",
     "watch": "webpack --watch",
-    "production": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack"
   }
 }

@@ -1,9 +1,10 @@
 # es2015-way
 
-Way to EcmaScript 2015
 <a href="https://travis-ci.org/cham11ng/webpack-starter">
-  <img src="https://travis-ci.org/cham11ng/webpack-starter.svg?branch=master" alt="Build Status">
+<img src="https://travis-ci.org/cham11ng/webpack-starter.svg?branch=master" alt="Build Status">
 </a>
+
+Way to Webpack Starter
 
 ## Requirement
 
@@ -11,8 +12,12 @@ Way to EcmaScript 2015
 * NPM (v5.5.1)
 * Yarn (v1.3.2)
 
-## Installation
+## Getting Started
 
-* `git clone git@github.com:cham11ng/webpack-starter.git`
-* `yarn install`
-* `yarn run build`
+    git clone git@github.com:cham11ng/webpack-starter.git
+    yarn
+    yarn build
+
+## License
+
+webpack-starter is under [MIT License](LICENSE).

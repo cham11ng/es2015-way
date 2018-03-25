@@ -17,6 +17,7 @@
     "no-shadow": "error",
     "prefer-const": "warn",
     "default-case": "error",
+    "no-unused-vars": "error",
     "space-infix-ops": "error",
     "no-trailing-spaces": "error",
     "linebreak-style": [2, "unix"],

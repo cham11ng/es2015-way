@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const WebpackBar = require('webpackbar');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');

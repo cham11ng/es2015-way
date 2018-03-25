@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var WebpackBar = require('webpackbar');
 var HTMLWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -35,6 +36,11 @@ module.exports = {
   },
 
   plugins: [
+    new WebpackBar({
+      profile: true,
+      name: 'Webpack Starter'
+    }),
+
     new ExtractTextPlugin('[name].css'),
 
     new webpack.LoaderOptionsPlugin({

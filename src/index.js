@@ -14,5 +14,7 @@ const person = Person.register('Sagar', 'Chamling');
 person.email = 'sagar@unknown.com';
 person.email = 'sgr.raee@gmail.com';
 console.dir(person);
+console.group('Person Info');
 console.log(person.fullName);
 console.log(person.allEmails);
+console.groupEnd
